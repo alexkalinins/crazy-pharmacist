@@ -7,22 +7,16 @@ export default async function fetchData() {
     let myData = null;
     try {
         let resp = await axios.get(LINK);
-        console.log(resp);
         myData = resp.data;
     } catch (err) {
         console.error(err);
-        console.log('ioadfadsfa wef');
+        console.log('Could not fetch from API.');
     }
-    console.log('data from api: ');
-    console.log(myData);
-    console.log('data is null? ' + null == myData);
-    // let dataObj = JSON.parse(myData);
-    let dataObj = myData;
 
     let drugs = [];
 
-    for (let dName in dataObj) {
-        drugs.push({ drugName: dName, drugDesc: dataObj[dName] });
+    for (let dName in myData) {
+        drugs.push({ drugName: dName, drugDesc: myData[dName] });
     }
 
     return drugs;

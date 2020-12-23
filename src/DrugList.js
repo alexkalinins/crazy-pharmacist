@@ -3,11 +3,7 @@ import Drug from './Drug.js';
 import './App.css';
 
 export default function DrugList({ drugs }) {
-    // return (
-    //     <div class="DrugList">
-    //         <Drug drug={drugs[0]} />
-    //     </div>
-    // )
+    
     return (
         <div class="DrugList">
             <Drug drug={drugs[0]} />
