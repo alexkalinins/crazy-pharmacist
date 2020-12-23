@@ -3,89 +3,54 @@ import DrugList from './DrugList.js';
 import fetchData from './DataFetcher';
 import { Button } from 'react-bootstrap';
 
-let generatedDrugs = [15];
-let preload = null;
 
 function App() {
-  let placeholderDrugs = [{ drugName: 'PlaceHolder', drugDesc: 'poop' },
-  { drugName: 'PlaceHolder', drugDesc: 'poop' },
-  { drugName: 'PlaceHolder', drugDesc: 'poop' },
-  { drugName: 'PlaceHolder', drugDesc: 'poop' },
-  { drugName: 'PlaceHolder', drugDesc: 'poop' }];
+  const [pageNum, setPageNum] = useState(0); // the page number
+  const [drugArray, setDrugArray] = useState([]); // the current drug array being showed
+  const [drugsFromAPI, setDrugsFromAPI] = useState([]); // latest drugs from api
 
-  const [pageNum, setPageNum] = useState(0);
-  const [drugArray, setDrugArray] = useState([]);
+  function incrementPageNum() {
+    switch (pageNum) {
+      case 2:
+        fetchData().then(data => {
+          setDrugsFromAPI(data)
+        }).catch(err => {
+          console.error(err);
+        });
+        setPageNum(pageNum + 1); // this should happen before api call finishes
+        break;
+      case 3:
+        // if it's 3, data should have been preloaded in page 2.
+        setPageNum(1);
+        break;
+      default:
+        setPageNum(pageNum + 1);
+    }
+  }
 
+  // works when page first works
   useEffect(() => {
-    console.log('running on first time????');
-    setDrugArray(getDrugSlice(0));
+    fetchData().then(data => {
+      setDrugsFromAPI(data);
+      setPageNum(1);
+    }).catch(err => {
+      console.error(err);
+    });
   }, []);
 
   useEffect(() => {
-    console.log(drugArray);
-  },[drugArray]);
-
-  function loadFromAPI() {
-    console.log('Call to LOAD from API');
-    fetchData().then((data) => {
-      console.log('Got Drugs')
-      generatedDrugs = data;
-      setDrugArray(data);
-    }).then(_ => {
-      setPageNum(1);
-    }).catch(poop => console.log(poop));
-  }
-
-  function preloadFromAPI() {
-    console.log('Call to PRELOAD from API');
-    fetchData().then((data) => {
-      console.log('Got Drugs')
-      preload = data;
-    }).catch(poop => console.log(poop));
-  }
-
-  function getDrugSlice(sliceNumber) {
-    console.log('Call to get drug slice of number: ' + sliceNumber)
-    if (sliceNumber === 0) {
-      loadFromAPI();
-      return placeholderDrugs
+    if (pageNum !== 0) {
+      let sliceLower = 5 * (pageNum - 1);
+      let sliceUpper = 5 * pageNum;
+      setDrugArray(drugsFromAPI.slice(sliceLower, sliceUpper));
     }
-
-    /*
-    Slice number 
-    1 2 3
-    lower
-    0 5 10
-    upper (exclusive)
-    5 10 15
-    */
-    let sliceLower = 5 * (sliceNumber - 1);
-    let sliceUpper = 5 * sliceNumber;
-
-    return generatedDrugs.slice(sliceLower, sliceUpper);
-  }
-
-  function incrementPageNum() {
-    console.log('Incrementing page number');
-    if (pageNum === 2) {
-      preloadFromAPI();
-    }
-
-    if (pageNum === 3) {
-      generatedDrugs = preload;
-      setPageNum(1);
-      return;
-    }
-
-    setPageNum(pageNum + 1);
-  }
-
-  //! place holder not necessary!!!! cuz it wont render if empty!
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pageNum]); // doesn't need drugsFromAPI as dependency because if pageNum is 0, nothing happens
 
   return (
     <div>
-      {drugArray.length>0 && <DrugList drugs={drugArray} />} 
-      <Button variant="primary" onClick ={()=>{console.log('I wass pressed')}}>Primary</Button>
+      {drugArray.length > 0 && <DrugList drugs={drugArray} />}
+      <Button variant="primary" onClick={() => { incrementPageNum() }}>Primary</Button>
     </div >
   );
 }
