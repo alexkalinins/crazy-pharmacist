@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/crazy-pharmacist/static/css/main.7eb5d3f1.chunk.css",
+    "main.js": "/crazy-pharmacist/static/js/main.00e592b1.chunk.js",
+    "main.js.map": "/crazy-pharmacist/static/js/main.00e592b1.chunk.js.map",
+    "runtime-main.js": "/crazy-pharmacist/static/js/runtime-main.5073b4aa.js",
+    "runtime-main.js.map": "/crazy-pharmacist/static/js/runtime-main.5073b4aa.js.map",
+    "static/js/2.febfce6d.chunk.js": "/crazy-pharmacist/static/js/2.febfce6d.chunk.js",
+    "static/js/2.febfce6d.chunk.js.map": "/crazy-pharmacist/static/js/2.febfce6d.chunk.js.map",
+    "static/js/3.a1968e58.chunk.js": "/crazy-pharmacist/static/js/3.a1968e58.chunk.js",
+    "static/js/3.a1968e58.chunk.js.map": "/crazy-pharmacist/static/js/3.a1968e58.chunk.js.map",
+    "index.html": "/crazy-pharmacist/index.html",
+    "static/css/main.7eb5d3f1.chunk.css.map": "/crazy-pharmacist/static/css/main.7eb5d3f1.chunk.css.map",
+    "static/js/2.febfce6d.chunk.js.LICENSE.txt": "/crazy-pharmacist/static/js/2.febfce6d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5073b4aa.js",
+    "static/js/2.febfce6d.chunk.js",
+    "static/css/main.7eb5d3f1.chunk.css",
+    "static/js/main.00e592b1.chunk.js"
+  ]
+}
