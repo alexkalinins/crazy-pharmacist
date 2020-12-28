@@ -40,8 +40,8 @@ function App() {
 
   useEffect(() => {
     if (pageNum !== 0) {
-      let sliceLower = 5 * (pageNum - 1);
-      let sliceUpper = 5 * pageNum;
+      let sliceLower = 6 * (pageNum - 1);
+      let sliceUpper = 6 * pageNum;
       setDrugArray(drugsFromAPI.slice(sliceLower, sliceUpper));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -56,35 +56,34 @@ function App() {
         fictional pharmaceuticals and their uses. Any resemblance to a real drug is coincidental.
       </p>
       {drugArray.length > 0 && <DrugList drugs={drugArray} />}
-      <Button variant="primary" onClick={() => { incrementPageNum() }}>Primary</Button>
-      <h2>How it works</h2>
-      <p>
-        This type of generator is known as a Markov Model. There are two of them in this project:
-        one for the names and one for the descriptions. For each 'state' (letter or word in a name
-        or description) that the model encounters when training, it record the state, along with
-        the transition to the next state. When done, it stores all states, all transitions and the
-        probabilities of observing them.
+      <Button variant="primary" onClick={() => { incrementPageNum() }}>Show More</Button>
+      <div class="HowItWorks">
+        <h2>How it works</h2>
+        <p>
+          This type of generator is known as a Markov Model. There are two of them in this project:
+          one for the names and one for the descriptions. For each 'state' (letter or word in a name
+          or description) that the model encounters when training, it record the state, along with
+          the transition to the next state. When done, it stores all states, all transitions and the
+          probabilities of observing them.
       </p>
-      <p>
-        When generating, the model transitions to the next state by picking the next state randomly,
-        using the probabilities that were collected when training. This is done until encountering
-        a termination state ('.'). Generated sequences are rejected if they are too long, too short
-        or don't sound right.
+        <p>
+          When generating, the model transitions to the next state by picking the next state randomly,
+          using the probabilities that were collected when training. This is done until encountering
+          a termination state ('.'). Generated sequences are rejected if they are too long, too short
+          or don't sound right. Generator source code (in Python and JavaScript!) along with the extracted
+        data is available on <a href='https://github.com/alexkalinins/crazy-pharmacist-generator'>GitHub</a>.
       </p>
-      <h2>Data Source</h2>
-      <p>
-        Drug brand names were collected from the National Drug Code (NDC) database. Use descriptions
-        were collected from Wikipedia.
+        <h2>Data Source</h2>
+        <p>
+          Drug brand names were collected from the National Drug Code (NDC) database. Use descriptions
+          were collected from Wikipedia.
       </p>
-      <p>
-        Generator source code (in Python and JavaScript!) along with the extracted data is available
-         on <a href='https://github.com/alexkalinins/crazy-pharmacist-generator'>GitHub</a>.
-      </p>
-      <p>If you use this program to name a perscription drug, let me know :) </p>
+        <p>If you use this program to name a perscription drug, let me know :) </p>
 
-      <footer>
-      Copyright 2020 by Alex Kalinins. All Rights Reserved.
+        <footer>
+          Copyright 2020 by Alex Kalinins. All Rights Reserved.
       </footer>
+      </div>
     </div >
   );
 }
