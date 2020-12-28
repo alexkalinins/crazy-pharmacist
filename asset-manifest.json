@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/crazy-pharmacist/static/css/main.7eb5d3f1.chunk.css",
-    "main.js": "/crazy-pharmacist/static/js/main.00e592b1.chunk.js",
-    "main.js.map": "/crazy-pharmacist/static/js/main.00e592b1.chunk.js.map",
-    "runtime-main.js": "/crazy-pharmacist/static/js/runtime-main.5073b4aa.js",
-    "runtime-main.js.map": "/crazy-pharmacist/static/js/runtime-main.5073b4aa.js.map",
-    "static/js/2.febfce6d.chunk.js": "/crazy-pharmacist/static/js/2.febfce6d.chunk.js",
-    "static/js/2.febfce6d.chunk.js.map": "/crazy-pharmacist/static/js/2.febfce6d.chunk.js.map",
-    "static/js/3.a1968e58.chunk.js": "/crazy-pharmacist/static/js/3.a1968e58.chunk.js",
-    "static/js/3.a1968e58.chunk.js.map": "/crazy-pharmacist/static/js/3.a1968e58.chunk.js.map",
+    "main.css": "/crazy-pharmacist/static/css/main.d8ca69e7.chunk.css",
+    "main.js": "/crazy-pharmacist/static/js/main.db1a61e1.chunk.js",
+    "main.js.map": "/crazy-pharmacist/static/js/main.db1a61e1.chunk.js.map",
+    "runtime-main.js": "/crazy-pharmacist/static/js/runtime-main.0fcc58a8.js",
+    "runtime-main.js.map": "/crazy-pharmacist/static/js/runtime-main.0fcc58a8.js.map",
+    "static/js/2.8457760b.chunk.js": "/crazy-pharmacist/static/js/2.8457760b.chunk.js",
+    "static/js/2.8457760b.chunk.js.map": "/crazy-pharmacist/static/js/2.8457760b.chunk.js.map",
+    "static/js/3.c1e6a855.chunk.js": "/crazy-pharmacist/static/js/3.c1e6a855.chunk.js",
+    "static/js/3.c1e6a855.chunk.js.map": "/crazy-pharmacist/static/js/3.c1e6a855.chunk.js.map",
     "index.html": "/crazy-pharmacist/index.html",
-    "static/css/main.7eb5d3f1.chunk.css.map": "/crazy-pharmacist/static/css/main.7eb5d3f1.chunk.css.map",
-    "static/js/2.febfce6d.chunk.js.LICENSE.txt": "/crazy-pharmacist/static/js/2.febfce6d.chunk.js.LICENSE.txt"
+    "static/css/main.d8ca69e7.chunk.css.map": "/crazy-pharmacist/static/css/main.d8ca69e7.chunk.css.map",
+    "static/js/2.8457760b.chunk.js.LICENSE.txt": "/crazy-pharmacist/static/js/2.8457760b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5073b4aa.js",
-    "static/js/2.febfce6d.chunk.js",
-    "static/css/main.7eb5d3f1.chunk.css",
-    "static/js/main.00e592b1.chunk.js"
+    "static/js/runtime-main.0fcc58a8.js",
+    "static/js/2.8457760b.chunk.js",
+    "static/css/main.d8ca69e7.chunk.css",
+    "static/js/main.db1a61e1.chunk.js"
   ]
 }
