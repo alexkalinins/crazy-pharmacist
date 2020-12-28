@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let LINK = 'https://4rqervoat2.execute-api.us-east-1.amazonaws.com/dev'; //todo
+let LINK = 'https://cors-anywhere.herokuapp.com/mhouol6jn7.execute-api.us-east-1.amazonaws.com/prod';
 
 export default async function fetchData() {
     // let apiData = getDataFromAPI();
