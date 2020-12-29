@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   color: rgb(43, 43, 43);
+  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,12 +12,15 @@
 
 body {
   text-align: center;
-  color: white;
+  /* color: white; */
+  color:rgb(253, 244, 122);
 }
 
-h1 {
+h1,h2 {
   text-align: center;
+  color:rgb(236, 224, 44);
 }
+
 
 a {
   color: white;
@@ -23,30 +28,32 @@ a {
 
 p {
   text-align: left;
+  color:rgb(248, 242, 190);
+
 }
 
 .mainDiv {
-  background-color: rgb(43, 43, 43);
-  /* margin: -1vh; */
+  background-color: rgb(45, 37, 58);
+
   padding: 40px;
 }
 
 .DrugList {
-  color: blueviolet;
   padding: 50px;
   /* display: flex;
   flex-direction: row;
   flex-wrap: wrap; */
   align-self: center;
+  justify-self: center;
   display: grid;
   max-width: 1200px;
 }
 
 .Drug {
-  background-color: rgb(52, 52, 207);
-  color: yellow;
+  background-color: rgb(76, 47, 182);
+  color: rgb(236, 224, 44);
   text-align: center;
-  border: 1px solid;
+  border: 3px solid;
   border-radius: 100px;
 
   margin-top: 1em;
@@ -66,23 +73,50 @@ p {
   margin-right: 10px;
   margin-right: 20px;
   margin-top: -10px;
+
+  color:rgb(236, 224, 44);
+
 }
 
 .DrugTitle {
+  font-weight: 700;
 }
 
 .Button{
-  margin-top: 75px;
-  margin-bottom: 75px;
+ 
   position: relative;
+  align-self: center;
+  justify-self: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-  color: blue;
+  min-width: 30vw;
+  border-radius: 20px;
+  border: 3px solid;
+  border-color: rgb(235, 214, 27);
+
+  color: rgb(255, 240, 34);
+  background-color:rgb(138, 116, 221);
+
+  margin-top: 20px;
+  margin-bottom:30px;
+  margin-left: -5px;
+
+  font-weight: 550;
+  font-size: large;
+}
+
+.hero{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 600px) {
   .DrugList {
     grid-template-columns: repeat(2, 1fr);
     min-height: 75vh;
+    justify-content: space-evenly;
   }
 
   .Drug{

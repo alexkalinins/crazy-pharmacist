@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import DrugList from './DrugList.js';
 import fetchData from './DataFetcher';
-import { Button } from 'react-bootstrap';
 
 
 function App() {
@@ -49,14 +48,16 @@ function App() {
 
   return (
     <div class='mainDiv'>
-      <h1>Crazy Pharmacist</h1>
-      <p>
-        Have you ever wondered where the names of perscription drugs come from? It seems like they
-        are pulled straight out of someones... head. This is a generator that creates the names of
-        fictional pharmaceuticals and their uses. Any resemblance to a real drug is coincidental.
+      <div class='hero'>
+        <h1>Crazy Pharmacist</h1>
+        <p>
+          Have you ever wondered where the names of perscription drugs come from? It seems like they
+          are pulled straight out of someones... head. This is a generator that creates the names of
+          fictional pharmaceuticals and their uses. Any resemblance to a real drug is coincidental.
       </p>
-      {drugArray.length > 0 && <DrugList drugs={drugArray} />}
-      <Button variant="primary" onClick={() => { incrementPageNum() }}>Show More</Button>
+        {drugArray.length > 0 && <DrugList drugs={drugArray} />}
+        <button class="Button" onClick={incrementPageNum}>Show More</button>
+      </div>
       <div class="HowItWorks">
         <h2>How it works</h2>
         <p>
